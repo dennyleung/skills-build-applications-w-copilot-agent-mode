@@ -1,0 +1,116 @@
+
+.App {
+  text-align: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+}
+
+
+.App-logo {
+  height: 60px;
+  pointer-events: none;
+  margin-right: 16px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+.App-header {
+  background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%);
+  min-height: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: calc(10px + 2vmin);
+  color: #fff;
+  padding: 24px 40px;
+}
+
+
+.App-link, .navbar .nav-link, a {
+  color: #ff9800 !important;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.App-link:hover, .navbar .nav-link:hover, a:hover {
+  color: #ff5722 !important;
+  text-decoration: underline;
+}
+
+/* Bootstrap Navbar Customization */
+.navbar {
+  background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%) !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.navbar-brand {
+  font-weight: bold;
+  color: #fff !important;
+  display: flex;
+  align-items: center;
+}
+
+/* Table Styling */
+.table {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.table thead th {
+  background: #007bff;
+  color: #fff;
+  border: none;
+}
+.table-striped tbody tr:nth-of-type(odd) {
+  background: #e3f2fd;
+}
+
+/* Button Styling */
+.btn, .btn-primary {
+  background: linear-gradient(90deg, #ff9800 0%, #ff5722 100%);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: background 0.2s;
+}
+.btn:hover, .btn-primary:hover {
+  background: linear-gradient(90deg, #ff5722 0%, #ff9800 100%);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #007bff;
+  font-weight: 700;
+}
+
+/* Card Styling */
+.card {
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  margin-bottom: 32px;
+}
+.card-header {
+  background: linear-gradient(90deg, #00c6ff 0%, #007bff 100%);
+  color: #fff;
+  font-weight: 600;
+}
+
+body {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
