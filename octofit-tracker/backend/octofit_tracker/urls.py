@@ -15,7 +15,27 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from .views import api_root, router
+
+import os
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from .views import router
+
+CODESPACE_NAME = os.environ.get('CODESPACE_NAME')
+if CODESPACE_NAME:
+    base_url = f"https://{CODESPACE_NAME}-8000.app.github.dev"
+else:
+    base_url = "http://localhost:8000"
+
+@api_view(['GET'])
+def api_root(request, format=None):
+    return Response({
+        'users': f'{base_url}/api/users/',
+        'teams': f'{base_url}/api/teams/',
+        'activities': f'{base_url}/api/activities/',
+        'leaderboard': f'{base_url}/api/leaderboard/',
+        'workouts': f'{base_url}/api/workouts/',
+    })
 
 urlpatterns = [
     path('admin/', admin.site.urls),
